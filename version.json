@@ -1,5 +1,5 @@
 {
-  "version": "1.5.1",
-  "notes": "修正早鳥免費結帳價格疊加；音樂時間軸互動時明顯增粗並移除控制點",
+  "version": "1.5.11",
+  "notes": "瀏海外觀重做：收合形狀改為螢幕上緣的自然延伸、真圓弧圓角、Apple 疊層陰影。PDF 轉 Word 保留內嵌圖片；Spotify 專輯封面加入備援來源。修正 HTML 轉 PDF 必定失敗、收合時咖啡圖示被瀏海遮住等問題。",
   "url": "https://harryverse277.gumroad.com/l/oxkzgr"
 }
