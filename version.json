@@ -1,5 +1,5 @@
 {
-  "version": "1.5.11",
-  "notes": "瀏海外觀重做：收合形狀改為螢幕上緣的自然延伸、真圓弧圓角、Apple 疊層陰影。PDF 轉 Word 保留內嵌圖片；Spotify 專輯封面加入備援來源。修正 HTML 轉 PDF 必定失敗、收合時咖啡圖示被瀏海遮住等問題。",
+  "version": "1.5.15",
+  "notes": "修正音訊轉檔會導致 App 直接關閉、影片轉檔完成後畫面停在 99% 不動、RTF 與 Big5 等非 UTF-8 文字檔轉檔失敗。面板上排按鍵（設定、關閉、分頁）在未播放音樂時點不到的問題已修正。拖曳大型檔案到 NotchClip 或 iCloud 不再讓畫面凍結。新增：影片可抽出音訊、GIF 可轉為靜態圖、Markdown 轉 PDF 會實際排版。",
   "url": "https://harryverse277.gumroad.com/l/oxkzgr"
 }
