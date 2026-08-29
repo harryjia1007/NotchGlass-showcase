@@ -7,7 +7,7 @@
 **Your MacBook notch, finally useful.**
 Drop files on it to convert, AirDrop, or stash them — and control your music from it.
 
-**[Free lifetime license for the first 50 users](https://harryverse277.gumroad.com/l/oxkzgr/EARLY200?wanted=true)** · US$6+ after that
+**[Get it for US$6](https://harryverse277.gumroad.com/l/oxkzgr?wanted=true)** · one-time purchase · 14-day money-back guarantee
 
 macOS 13+ · Developer ID signed & notarized · Works with or without a physical notch
 
@@ -89,10 +89,10 @@ Architecture write-up: **[ARCHITECTURE.md](ARCHITECTURE.md)** · Full spec: **[S
 
 ## Install
 
-1. Download `NotchGlass.dmg` from the [Gumroad page](https://harryverse277.gumroad.com/l/oxkzgr/EARLY200?wanted=true)
+1. Download `NotchGlass.dmg` from the [Gumroad page](https://harryverse277.gumroad.com/l/oxkzgr?wanted=true)
 2. Open the DMG and drag NotchGlass into Applications
 3. Launch it — the build is Developer ID signed and Apple-notarized
-4. First 50 users: check out for free and enter your Gumroad key to unlock permanently
+4. Enter the Gumroad license key from your receipt to unlock permanently
 
 > Requires macOS 13 or later. Works on Macs with or without a physical notch.
 
@@ -133,7 +133,7 @@ Architecture write-up: **[ARCHITECTURE.md](ARCHITECTURE.md)** · Full spec: **[S
 
 系統需求 macOS 13+，有無實體瀏海皆可使用。已完成 Developer ID 簽章與 Apple 公證。
 
-**[前 50 名永久免費](https://harryverse277.gumroad.com/l/oxkzgr/EARLY200?wanted=true)**，之後 US$6+ 買斷。
+**[US$6 一次買斷](https://harryverse277.gumroad.com/l/oxkzgr?wanted=true)**，不綁訂閱，14 天不滿意全額退費。
 
 </details>
 
