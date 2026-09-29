@@ -1,5 +1,9 @@
 # NotchGlass 架構導讀 / Architecture Deep-Dive
 
+> **Historical engineering notes, not a current compatibility or permission guarantee.** These examples document earlier implementation choices. Music providers, artwork resolution, permissions and licensing have evolved; consult [README](README.md) for current public claims. Source snippets are illustrative, not a complete buildable app.
+>
+> **歷史架構導讀**：以下早期程式片段與測試描述不等同目前版本實測。尤其不能把 iTunes 搜尋結果視為 Spotify 正確封面的保證，或把 MediaRemote 稱為所有系統都可靠的免權限介面。
+
 > 本文件節錄 NotchGlass 的核心工程決策與關鍵程式碼，作為作品集的技術展示。
 > Curated engineering highlights from the NotchGlass codebase.
 
@@ -76,7 +80,7 @@ final class NotchHostingView: NSHostingView<AnyView> {
 panel.becomesKeyOnlyIfNeeded = true   // 不搶其他 App 的焦點
 ```
 
-## 4. 免權限的音樂整合
+## 4. 早期音樂整合與限制
 
 三層資料來源，依權限需求由低到高：
 
@@ -94,7 +98,7 @@ AppleScript 在使用者未授權時會**無限懸置**（TCC 對話框 pending�
 if let since = busySince, Date().timeIntervalSince(since) < 6 { return }
 ```
 
-封面圖另有 **iTunes Search API 備援**（免權限），使用者完全不授權也看得到封面。
+早期版本使用過 **iTunes Search API 備援**。歌曲名稱搜尋可能配到不同版本的封面，不能當成來源正確性的保證。實際播放控制與資訊依來源、macOS 版本和使用者授權而異。
 
 ## 5. 轉換引擎
 
@@ -119,8 +123,8 @@ if let uses = json["uses"] as? Int, uses > maxActivations { return .tooManyActiv
 
 ## 工程原則
 
-1. **權限是 UX 成本** — 能免權限就免權限，授權只用來「增強」而非「啟用」功能
-2. **每條關鍵路徑都有備援** — 拖曳偵測 ×3、封面來源 ×3、拖曳結束偵測 ×3
-3. **狀態決定資源** — 視窗大小、輪詢頻率都跟著使用狀態縮放，閒置時近乎零成本
+1. **權限必須透明**：向使用者解釋目的；未授權時明確說明哪些操作無法使用。
+2. **正確性優先於備援數量**：找不到可靠封面時顯示 placeholder，不拿相似歌曲的圖片假裝成功。
+3. **狀態決定資源**：視窗大小與輪詢依使用狀態調整；效能仍需實機量測，不能宣稱零成本。
 
 > 完整原始碼為私有。技術交流或面試展示請聯繫：harryjia1007@gmail.com
