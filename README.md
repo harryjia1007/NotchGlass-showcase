@@ -51,6 +51,9 @@ manual sleep or closing your MacBook lid, and releases when the app quits.
 
 ## Buy, install and update
 
+[Getting started / 安裝與第一次轉檔](docs/GETTING-STARTED.md) ·
+[Report a non-sensitive bug / 回報一般功能問題](https://github.com/harryjia1007/NotchGlass-showcase/issues/new?template=bug-report.yml)
+
 **Current public download: 1.5.15** (checked 2026-09-29). See [version.json](version.json).
 This is a Developer ID distribution, not a Mac App Store release.
 
