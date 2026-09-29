@@ -1,0 +1,61 @@
+name: Bug report / 問題回報
+description: Report a reproducible app issue without sharing private data.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a public report. Never include a License Key, order email, payment details, private files or unredacted logs.
+        這是公開回報。請勿提供授權金鑰、訂單信箱、付款資料、私人文件或未遮蔽的紀錄。
+        For billing, activation, refunds or security issues, email harryjia1007@gmail.com privately.
+  - type: input
+    id: version
+    attributes:
+      label: NotchGlass version / App 版本
+      placeholder: "For example: 1.5.15"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: macOS version and Mac model / 系統版本與機型
+      description: Do not include serial numbers. 不需要序號。
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected workflow / 受影響的操作
+      options:
+        - Conversion / 轉檔
+        - Music / 音樂
+        - Settings or surface / 設定或瀏海介面
+        - NotchClip or sharing / 檔案暫存或分享
+        - Keep Awake / 保持喚醒
+        - Other / 其他
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and result / 操作步驟與結果
+      description: Include expected and actual behavior. 請寫預期結果與實際結果。
+      placeholder: |
+        1.
+        2.
+        Expected / 預期：
+        Actual / 實際：
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Relevant context / 補充資訊
+      description: File format and size, player/browser version, external display or Spaces setup. Use a non-sensitive example; never attach the original private file.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check / 隱私確認
+      options:
+        - label: I removed keys, emails, private files and payment details. 我已移除金鑰、信箱、私人檔案和付款資料。
+          required: true

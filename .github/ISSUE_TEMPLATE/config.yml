@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Getting started / 安裝與第一次轉檔
+    url: https://github.com/harryjia1007/NotchGlass-showcase/blob/main/docs/GETTING-STARTED.md
+    about: Download, activate, convert a first image and update safely.
+  - name: Private support / 私人客服
+    url: mailto:harryjia1007@gmail.com
+    about: Billing, License Keys, refunds and security issues must not be posted publicly.
