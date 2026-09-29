@@ -1,148 +1,106 @@
 <div align="center">
 
-<img src="docs/images/app-icon.png" width="160" alt="NotchGlass icon">
+<img src="docs/images/app-icon.png" width="144" alt="NotchGlass app icon">
 
 # NotchGlass
 
-**Your MacBook notch, finally useful.**
-Drop files on it to convert, AirDrop, or stash them — and control your music from it.
+**Convert files locally. Right from your Mac's notch.**
 
-**[Get it for US$6](https://harryverse277.gumroad.com/l/oxkzgr?wanted=true)** · one-time purchase · 14-day money-back guarantee
+**把常用檔案轉換，放到 Mac 的瀏海。**
 
-macOS 13+ · Developer ID signed & notarized · Works with or without a physical notch
+[Get NotchGlass · From US$6](https://gum.co/u/dhcmlwql)
+
+USD · One-time purchase · Lifetime license for up to 2 Macs · No subscription
+
+14-day refund window on paid purchases · macOS 13 or later
 
 </div>
 
----
+## A shorter path from a file to the format you need
 
-## What it does
+Drag a supported file toward the notch, drop it on **Convert**, select an output
+format, and open the result. Conversion runs on your Mac, without sending the
+file to an online conversion service.
 
-Every app treats the notch as an obstacle to design around. NotchGlass makes it a
-place you drop things.
+NotchGlass is for people who repeat these small file handoffs throughout the day.
+If Preview and Finder already fit your workflow, you may not need another app.
 
-Drag a file **toward the notch** and the panel expands. Let go on one of four tiles:
+| Workflow | What to expect |
+| --- | --- |
+| Images | Convert supported formats such as PNG, JPEG and HEIC. Available outputs depend on macOS encoding support. |
+| Images and PDF | Combine images into a PDF, or export PDF pages as images. |
+| Documents and media | Convert supported documents, audio and video. Some media formats require separately installed FFmpeg. |
+| NotchClip | Copy files to the local NotchClip folder and place file references on the clipboard. This is not a clipboard-history service. |
+| AirDrop and iCloud | Open the system AirDrop flow or save to iCloud Drive. macOS controls receiving devices and cloud synchronization. |
 
-| Tile | What it does |
-|---|---|
-| **Convert** | Converts the file in place — locally |
-| **AirDrop** | Opens AirDrop with the file ready to send |
-| **iCloud** | Saves it to iCloud Drive |
-| **NotchClip** | Stashes it on a shelf and puts it on your clipboard |
+**PDF-to-DOCX is not a layout-preservation guarantee.** Fonts, tables, complex
+layouts and scanned PDFs need review; scanned-document OCR is not included.
+Check the output before sharing it. Ask about your specific format before buying.
 
-The panel only opens while you're dragging near it. The rest of the time it collapses
-to a small pill that shows album art and a waveform.
+## Music, close at hand
 
-<img src="docs/images/drag-panel.png" width="520" alt="Drag panel">
+Desktop Spotify and Apple Music integrations provide playback information and
+controls when supported by the source and permissions. Artwork, seeking and
+source switching can vary; macOS Automation permission may be needed.
 
-### Conversion runs entirely on your Mac
+YouTube / YouTube Music browser fallback has more limited, browser-dependent
+capabilities. It is not equivalent to a fully supported desktop integration.
 
-No upload, no queue, no "your file will be deleted in one hour" you have to trust.
-Built on Apple's own frameworks (ImageIO, AVFoundation, PDFKit, Core Graphics).
+Keep Awake can prevent idle display sleep while enabled. It does not override
+manual sleep or closing your MacBook lid, and releases when the app quits.
 
-- **Images** — HEIC / PNG / JPG / TIFF / WebP (encoder support detected at runtime)
-- **Images ⇄ PDF** — merge many images into one PDF; export PDF pages as 2× PNG
-- **Video** — MOV → MP4, and native GIF export (no ffmpeg dependency)
-- **Word ⇄ PDF** — DOCX → PDF with pagination; PDF → DOCX preserving text styling
-- **TXT → HTML** — detects HTML source saved as `.txt` and restores it
-- Batch conversion, output beside the original, never overwrites (auto-numbered)
+## Buy, install and update
 
-**PDF → Word tables actually survive.** Most converters — including the big online
-ones — flatten tables into loose absolutely-positioned text, and you rebuild the
-layout by hand. NotchGlass reads the rectangle-drawing operators out of the PDF's
-content stream to recover the real grid, then emits a proper Word table.
+**Current public download: 1.5.15** (checked 2026-09-29). See [version.json](version.json).
+This is a Developer ID distribution, not a Mac App Store release.
 
-### Music
+1. [Buy from US$6 on Gumroad](https://gum.co/u/dhcmlwql). A higher support amount is optional; check USD pricing and any taxes at checkout.
+2. Download the current DMG from your purchase content and drag NotchGlass into Applications.
+3. Open the app. The release is Developer ID signed and Apple-notarized; macOS may still show a first-download confirmation or a permission request.
+4. Find your License Key in the purchase content and enter it in Settings. Never post your key publicly.
+5. Updates are manual: download the new release from the same purchase, quit NotchGlass and replace the app. Keep preferences and Keychain data.
 
-<img src="docs/images/music-panel.png" width="520" alt="Music panel">
+The release targets macOS 13+, Apple Silicon and Intel, including Macs without a
+physical notch. This is not a claim that every OS, display or Spaces configuration
+has been tested. Contact support about your setup if uncertain.
 
-- **Spotify and Apple Music**, detected and switched automatically
-- Title / artist / album / **artwork**, with a three-tier artwork fallback
-  (Spotify CDN → iTunes Search API → cache) and a cross-fade on track change
-- A bold, scrubbable timeline — click or drag to seek
-- When idle, a mini cover and a live waveform peek out beside the notch
+File conversion is local. License checks, update checks and artwork lookups may
+use the network. Choosing AirDrop or iCloud intentionally uses those services.
 
-### Also
+For support or a refund within 14 days of a paid purchase, email
+[harryjia1007@gmail.com](mailto:harryjia1007@gmail.com) from your order email.
+Any longer refund window previously promised for an existing order is honored.
 
-- **Keep awake** — one click blocks idle sleep; restores your settings on quit
-- **Follows every Space**, full-screen app, and Stage Manager
-- Never appears in the Dock, Command-Tab, or the normal window cycle
+## 繁體中文
 
-## Engineering notes
+拖著支援的檔案靠近瀏海，放到 **Convert**，選擇格式，再開啟轉換結果。
+轉檔在本機執行，不需要把檔案交給線上轉檔網站。
 
-Architecture write-up: **[ARCHITECTURE.md](ARCHITECTURE.md)** · Full spec: **[SPEC.md](SPEC.md)**
+- 常見用途：PNG／JPEG／HEIC 等圖片轉換、多圖合併 PDF、PDF 頁面輸出成圖片。
+- 文件與影音依來源格式及系統能力提供選項；部分影音格式需要額外 FFmpeg。
+- PDF 轉 Word 不保證完整保留表格、字型與排版，也不含掃描 OCR；請核對輸出結果。
+- 音樂控制與封面依播放器、權限和來源而異；瀏覽器 fallback 不代表完整支援。
+- NotchClip 是本機檔案暫存；AirDrop 由系統處理；存入 iCloud 不等於已同步完成。
 
-- **Non-intrusive window architecture** — the `NSPanel` resizes with state: it collapses
-  to pill size when idle so no invisible window covers your desktop, and only expands
-  into a capture area once a drag begins
-- **Triple-redundant drag detection** — global event monitor + drag pasteboard
-  `changeCount` polling + AppKit `draggingEntered`. None is reliable alone; the
-  `changeCount` comparison is what stops marquee selection from false-triggering
-- **Permission-free music metadata** — `DistributedNotification` + `MediaRemote`,
-  with AppleScript only as an enhancement path (behind a TCC hang watchdog)
-- **Liquid Glass visuals** — persistent `NSVisualEffectView`, continuous corner radii,
-  specular highlights, spring deformation animation
-- **Licensing** — 3-day trial + Gumroad key validation + offline tolerance, stored in Keychain
+**[US$6 起取得 NotchGlass](https://gum.co/u/dhcmlwql)**：美元計價、一次付費、
+最多 2 台 Mac 的永久授權、無訂閱；付費後 14 天可申請退款。
+目前正式下載為 **1.5.15**，不以尚未發布的候選版本作功能承諾。
 
-> 📦 This repo is a portfolio showcase (architecture docs + code walkthrough).
-> The full source is private. Happy to walk through it for interviews or technical
-> discussion — harryjia1007@gmail.com
+購買內容內有 DMG 與 License Key。把 App 移入 Applications，再到設定貼上金鑰。
+更新時由原購買紀錄下載新版，退出 App 後替換；不要刪除偏好設定或鑰匙圈資料。
+安裝、格式相容性或授權問題請使用訂單信箱聯繫上方客服，不要公開金鑰。
 
-## Install
+## About this repository
 
-1. Download `NotchGlass.dmg` from the [Gumroad page](https://harryverse277.gumroad.com/l/oxkzgr?wanted=true)
-2. Open the DMG and drag NotchGlass into Applications
-3. Launch it — the build is Developer ID signed and Apple-notarized
-4. Enter the Gumroad license key from your receipt to unlock permanently
+This is a **public product showcase**, not an open-source distribution of the app.
+The complete source code is private. The links below contain historical engineering
+notes, not current release guarantees:
 
-> Requires macOS 13 or later. Works on Macs with or without a physical notch.
+- [Architecture notes](ARCHITECTURE.md)
+- [Historical design specification](SPEC.md)
+- [Media provenance and limitations](docs/MEDIA.md)
 
----
-
-<details>
-<summary><b>繁體中文說明</b></summary>
-
-<br>
-
-**把 MacBook 瀏海變成 Liquid Glass 風格的生產力中樞**——音樂控制 × 拖放檔案操作 × 格式轉換。
-
-拖著檔案**靠近瀏海**，面板才展開（離開即收回，不干擾視野），放到四格之一：
-
-| 格子 | 功能 |
-|---|---|
-| **Convert** | 就地格式轉換 |
-| **AirDrop** | 直接開啟 AirDrop 傳送 |
-| **iCloud** | 上傳到 iCloud Drive |
-| **NotchClip** | 存入暫存夾並放上剪貼簿，到處 ⌘V |
-
-**轉換全部在你的 Mac 上完成，不上傳任何檔案。**
-
-- 圖片互轉：HEIC / PNG / JPG / TIFF / WebP
-- 圖片 ↔ PDF：多張圖合併單一 PDF、PDF 逐頁輸出 2x PNG
-- 影片：MOV → MP4、原生 GIF 轉換（不依賴 ffmpeg）
-- Word ⇄ PDF：DOCX → PDF 自動分頁、PDF → DOCX 保留文字樣式
-- **PDF → Word 的表格不會跑版**：直接讀 PDF 內容串流的矩形繪製指令還原真正的格線，
-  輸出成 Word 原生表格，不是一堆散落的文字
-- TXT → HTML：自動辨識「HTML 原始碼存成 .txt」並還原
-- 多檔批次、輸出與原檔同目錄、重名自動編號絕不覆蓋
-
-音樂：Spotify 與 Apple Music 自動偵測切換、專輯封面三路備援、可拖曳 seek 的時間軸；
-閒置時瀏海兩側露出迷你封面與動態音波。
-
-其他：一鍵保持喚醒（退出自動恢復）、跟隨所有 Spaces 與全螢幕 App、
-不出現在 Dock 與 Command-Tab。
-
-系統需求 macOS 13+，有無實體瀏海皆可使用。已完成 Developer ID 簽章與 Apple 公證。
-
-**[US$6 一次買斷](https://harryverse277.gumroad.com/l/oxkzgr?wanted=true)**，不綁訂閱，14 天不滿意全額退費。
-
-</details>
-
-## License
+The purchase supports a maintained, packaged macOS app; it is not a source-code license.
+No account credential, signing key or buyer information belongs in this repository.
 
 © 2026 Chia-Peng Chen (Harry). All rights reserved.
-
----
-
-<div align="center">
-Built with SwiftUI + AppKit · Designed with Liquid Glass
-</div>

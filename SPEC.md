@@ -1,4 +1,6 @@
-# NotchGlass — 規格書
+# NotchGlass — 歷史設計規格
+
+> **歷史文件，不是目前販售版本的驗收證明。** 以下保存 2026-06 初期設計及當時紀錄，包含已改變的固定深色、音量控制、格式範圍與音樂備援做法。不要以本頁勾選項目推論目前版本或所有 Mac 均已通過。現行產品、價格、限制與下載版本以 [README](README.md) 及 [Gumroad](https://harryverse277.gumroad.com/l/oxkzgr) 為準。
 
 > macOS 瀏海（notch）懸浮小工具
 > 設計語言：Apple **Liquid Glass**（液態玻璃）
