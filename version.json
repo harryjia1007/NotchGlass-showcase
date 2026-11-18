@@ -1,5 +1,6 @@
 {
-  "version": "1.5.15",
-  "notes": "修正音訊轉檔會導致 App 直接關閉、影片轉檔完成後畫面停在 99% 不動、RTF 與 Big5 等非 UTF-8 文字檔轉檔失敗。面板上排按鍵（設定、關閉、分頁）在未播放音樂時點不到的問題已修正。拖曳大型檔案到 NotchClip 或 iCloud 不再讓畫面凍結。新增：影片可抽出音訊、GIF 可轉為靜態圖、Markdown 轉 PDF 會實際排版。",
-  "url": "https://harryverse277.gumroad.com/l/oxkzgr"
+  "version": "1.5.17",
+  "build": 48,
+  "notes": "已購買者可從原本的 Gumroad 收據或購買庫下載新版，不用重買。結束 NotchGlass 後替換「應用程式」內的 App；若需要重新啟用，請使用原序號。",
+  "url": "https://gumroad.com/library"
 }
